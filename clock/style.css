@@ -1,11 +1,12 @@
 body{
     background-color: #9999CC;
+    font-size: 30px;
 }
 
 .clock{
     border: 20px solid red;
-    width: 30rem;
-    height: 30rem;
+    width: 25rem;
+    height: 25rem;
     border-radius: 50%;
     margin: 50px auto;
     position: relative;
@@ -21,14 +22,38 @@ body{
 transform: translateY(-3px);
 }
 
+.ver {
+    display: flex;
+    position: absolute;
+    /* border: 1px solid yellow; */
+    top: 0;
+    right: 47%;
+    gap: 13.9rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hor {
+    display: flex;
+    position: absolute;
+    /* border: 1px solid yellow; */
+    top: 38.5%;
+   left: 5%;
+    
+    gap: 21rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
 .hand{
-  
+    width: 50%;
+    height: 6px;
+    background-color: black;
     position: absolute;
     top: 50%;
     transform-origin: 100%;
-    transform: rotate(90deg);
-    transition: 0.5s all;
-    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transform: rotate(180deg);
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
 }
 .sec-hand{
 
@@ -37,14 +62,14 @@ transform: translateY(-3px);
     height: 2px;
 }
 .min-hand{
-
+left: 10%;
     background: rgb(206, 71, 71);
-    width: 50%;
+    width: 40%;
     height: 2px;
 }
 .hour-hand{
-
+left: 20%;
     background: rgb(28, 7, 150);
-    width: 50%;
+    width: 30%;
     height: 2px;
 }
